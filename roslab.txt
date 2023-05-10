@@ -1,0 +1,93 @@
+ros2 pkg create --build-type ament_python my_package --dependencies rclpy (in src)
+colcon build (outside src)
+source install/setup.bash
+gedit ~/.bashrc
+BASHRC LAST LINES
+source /opt/ros/humble/setup.bash
+export SVGA_VGPU10=0
+export ROS_DOMAIN_ID=99
+source ~/ros2_ws/install/setup.bash
+
+
+ros2 run package_name file_name
+rqt_graph
+
+
+
+
+2nd
+
+ros2 run turtlesim turtlesim_node
+ros2 run my_package tcircle ( tcircle - setup name)
+
+
+MY_BOT
+new folder urdf is created inside mybot
+file robot.urdf is created inside that
+
+crate a launch folder
+then add gazebo.launch.py inside that
+then add rviz.launch.py inside that
+
+edit setup file as there
+
+copy path of urdf file and put it in raviz.launch.py and gazebo.launch.py
+
+(for rviz follow mannual lab4) 
+ros2 launch my_bot raviz.launch.py or rviz.launch.py
+
+	to move bot in gazebo launch gazebo file then run move file
+	test file is for testing the camera
+		ros2 launch my_bot gazebo.launch.py
+		ros2 run my_bot move
+
+To get the road
+	insert - add path - model editor - road red - open
+
+
+To capture reference image run gazebo and file - test
+		to save that just close it when u get best shot
+
+		road - just to check whether to go right or left with reference to the image
+
+to follow the path or road file - road_follow
+
+
+
+
+
+
+
+
+
+
+
+
+
+MY ARM
+
+create a config folder
+	create a file control.yaml    ------ file name
+
+Create urdf folder
+	add urdf file inside---------------- arm.urdf
+		in line 226 change the path
+
+
+create launch folder                 Change the path in all following 3
+	create control.launch.py
+		gazebo.launch,py
+		rviz.launch.py
+
+Inside my_arm folder Create file ----- control.py
+
+Run it in sequence as in mannual
+
+
+
+
+
+ 
+
+
+
