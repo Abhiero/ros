@@ -47,6 +47,10 @@ ros2 launch my_bot raviz.launch.py or rviz.launch.py
 		ros2 launch my_bot gazebo.launch.py
 		ros2 run my_bot move
 
+
+download road and add to folder
+	home-- model_editor_models--road red -- yellow line 
+
 To get the road
 	insert - add path - model editor - road red - open
 
