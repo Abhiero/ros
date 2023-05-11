@@ -2,6 +2,7 @@ ros2 pkg create --build-type ament_python my_package --dependencies rclpy (in s
 colcon build (outside src)
 source install/setup.bash
 gedit ~/.bashrc
+
 BASHRC LAST LINES
 source /opt/ros/humble/setup.bash
 export SVGA_VGPU10=0
@@ -18,7 +19,12 @@ rqt_graph
 2nd
 
 ros2 run turtlesim turtlesim_node
-ros2 run my_package tcircle ( tcircle - setup name)
+
+ros2 service call /spawn turtlesim/srv/Spawn "{x: 2, y: 2, theta: 0.2, name: ''}"
+
+ros2 run my_package tcircle ( tcircle - setup name)   killer
+
+
 
 
 MY_BOT
@@ -82,6 +88,20 @@ create launch folder                 Change the path in all following 3
 Inside my_arm folder Create file ----- control.py
 
 Run it in sequence as in mannual
+
+
+
+BALL FOLLOWER
+LAUNCH gazebo and rviz lab ka
+
+create the ball and edit
+get spectrum plane from -- insert-connecting to model database-spectrumplane
+
+	ros2 run ball_tracker detect_ball --ros-args -p tuning_mode:=true -r image_in:=/camera1/image_raw (check which camera used in rviz) (gui will come)
+	tune and then get image from rviz -- add-- image ( topic -- image tuning)
+
+	ros2 run ball_tracker detect_ball_3d
+	ros2 run ball_tracker follow_ball
 
 
 
