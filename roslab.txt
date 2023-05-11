@@ -106,6 +106,15 @@ get spectrum plane from -- insert-connecting to model database-spectrumplane
 
 
 
+turtle bot
+home--- koboki_ws--- turtlebot_pkg---- turtle_pkg
+ros2 launch kobuki_node kobuki_node.launch.py
+ros2 topic list
+ros2 run turtlebot_pkg goforward
+
+
+
+
 
  
 
